@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>navbar_setting</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<script src="js/common.js"></script>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div class="wrap evaluation_manage_made">
+		<div class="hdr_wrap">
+			<div class="header">
+				<div class="logo"><img src="img/ubase_logo.png" alt=""></div>
+				<ul>
+					<!-- 상단 네비바 active 옮기면 컬러 변경됨 -->
+					<li class="active"><a href="#">기본 정보 업로드</a></li>
+					<li><a href="#">평가 설정</a></li>
+					<li><a href="#">평가 결과 관리</a></li>
+					<li><a href="#">평가하기</a></li>
+				</ul>
+				<div class="user_logout">
+					<p>안녕하세요. <span>최고관리자</span>님</p>
+					<button>로그아웃</button>
+				</div>
+			</div>
+		</div>
+		<div class="article">
+			<div id="nav" class="nav">
+				<div onclick="navToggle()" id="navBtn" class="on"></div>
+				<!-- 상단 >> 기본 정보 업로드 -->
+				<!--
+			  <h3 class="header_nav_title">기본 정보 업로드</h3>
+				<ul class="sub_nav">
+					<li class="cat active">
+						<a class="sub_title active" href="#">
+							<span class="cat_icon_img">
+								<img src="img/lnb_icon/work_off_icon.png" alt="">
+							</span>
+							기본 정보 업로드
+						</a>
+						<ul class="cat_sub_nav">
+							<li><a href="#">- 사원 정보 업로드</a></li>
+							<li class="active"><a href="#">- 사업 계획 대비 달성률 업로드</a></li>
+						</ul>
+					</li>
+				</ul>
+				-->
+
+				<!-- 상단 >> 평가설정 네이바 -->
+				<h3 class="header_nav_title">평가 설정</h3>
+				<ul class="sub_nav">
+					<li class="cat active">
+						<a class="sub_title active" href="#">
+							<span class="cat_icon_img">
+								<img src="img/lnb_icon/question_off_icon.png" alt="">
+							</span>
+							평가 기본 설정
+						</a>
+						<ul class="cat_sub_nav">
+							<li class="active"><a href="#">- 평가요소관리</a></li>
+							<li><a href="#">- 문항지 관리</a></li>
+							<li><a href="#">- 행동 지표 관리</a></li>
+						</ul>
+					</li>
+					<li class="cat">
+						<a class="sub_title" href="#">
+							<span class="cat_icon_img">
+								<img src="img/lnb_icon/question_off_icon.png" alt="">
+							</span>
+							평가자 맵핑 설정
+						</a>
+						<ul class="cat_sub_nav">
+							<li><a href="#">- 리더십 평가</a></li>
+							<li><a href="#">- 동료 평가</a></li>
+						</ul>
+					</li>
+					<li class="cat">
+						<a class="sub_title" href="#">
+							<span class="cat_icon_img">
+								<img src="img/lnb_icon/question_off_icon.png" alt="">
+							</span>
+							상대 평가 설정
+						</a>
+						<ul class="cat_sub_nav">
+							<li><a href="#">- 상대평가 그룹 설정</a></li>
+							<li><a href="#">- 평가 그룹 인원 및 배분 설정</a></li>
+						</ul>
+					</li>
+					<li class="cat">
+						<a class="sub_title" href="#">
+							<span class="cat_icon_img">
+								<img src="img/lnb_icon/smallgroup_off_icon.png" alt="">
+							</span>
+							평가 설정
+						</a>
+					</li>
+				</ul>
+
+				<!-- 상단 >> 평가 결과 관리 -->
+				<h3 class="header_nav_title">평가 결과 관리</h3>
+				<ul class="sub_nav">
+					<li class="cat active">
+						<a class="sub_title active" href="#">
+							<span class="cat_icon_img">
+								<img src="img/lnb_icon/question_off_icon.png" alt="">
+							</span>
+							평가 조회
+						</a>
+					</li>
+				</ul>
+
+			</div>
+			 <div id="wrap_contents" class="wrap_contents">
+				 <!-- 컨텐츠 내용 -->
+			</div>
+		</div>
+
+
+
+	</div><!-- wrap div 마지막 -->
+</body>
+<script>
+	$(document).ready(function(){
+		$('.close_icon').click(function(){
+			$('.popup_competency_evaluation').hide();
+		})
+		$('.close_icon').click(function(){
+			$('.popup_leadership_evaluation').hide();
+		})
+		$('.close_icon').click(function(){
+			$('.popup_partner_evaluation').hide();
+		})
+	})
+</script>
+</html>

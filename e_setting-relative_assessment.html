@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>e_setting-relative_assessment</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<script src="js/common.js"></script>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+</head>
+<script>
+	$(document).ready(function(){
+		$('.click_detail').click(function(){
+			$('.bg_back').show();
+			$('.popup_rater_detail').show();
+		});
+		$('.close_icon, .btn_close').click(function(){
+			$('.bg_back').hide();
+			$('.popup_rater_detail').hide();
+		});
+	});
+</script>
+<body>
+	<div class="wrap relative_assessment">
+		<div class="hdr_wrap">
+			<div class="header">
+				<div class="logo"><img src="img/ubase_logo.png" alt=""></div>
+				<ul>
+					<li><a href="#">기본 정보 업로드</a></li>
+					<li class="active"><a href="#">평가 설정</a></li>
+					<li><a href="#">평가 결과 관리</a></li>
+					<li><a href="#">평가하기</a></li>
+				</ul>
+				<div class="user_logout">
+					<p>안녕하세요. <span>최고관리자</span>님</p>
+					<button>로그아웃</button>
+				</div>
+			</div>
+		</div>
+		<div class="article">
+			<div id="nav" class="nav">
+				<div onclick="navToggle()" id="navBtn" class="on"></div>
+				<h3 class="header_nav_title">평가 설정</h3>
+				<ul class="sub_nav">
+					<li class="cat">
+						<a class="sub_title" href="#">
+							<span class="cat_icon_img">
+								<img src="img/lnb_icon/question_off_icon.png" alt="">
+							</span>
+							평가 관리
+						</a>
+						<ul class="cat_sub_nav">
+							<li><a href="#">- 평가관리</a></li>
+							<li><a href="#">- 문항지 관리</a></li>
+							<li><a href="#">- 행동 지표 관리</a></li>
+						</ul>
+					</li>
+					<li class="cat">
+						<a class="sub_title" href="#">
+							<span class="cat_icon_img">
+								<img src="img/lnb_icon/question_off_icon.png" alt="">
+							</span>
+							평가자 맵핑 설정
+						</a>
+						<ul class="cat_sub_nav">
+							<li><a href="#">- 리더십 평가</a></li>
+							<li><a href="#">- 동료 평가</a></li>
+						</ul>
+					</li>
+					<li class="cat active">
+						<a class="sub_title active" href="#">
+							<span class="cat_icon_img">
+								<img src="img/lnb_icon/question_off_icon.png" alt="">
+							</span>
+							상대 평가 설정
+						</a>
+						<ul class="cat_sub_nav">
+							<li class="active"><a href="#">- 상대평가 그룹 설정</a></li>
+							<li><a href="#">- 평가 그룹 인원 및 배분 설정</a></li>
+						</ul>
+					</li>
+					<li class="cat">
+						<a class="sub_title" href="#">
+							<span class="cat_icon_img">
+								<img src="img/lnb_icon/smallgroup_off_icon.png" alt="">
+							</span>
+							평가 요소 관리
+						</a>
+					</li>
+				</ul>
+			</div>
+			 <div id="wrap_contents" class="wrap_contents">
+				<div class="not_included mt_20">
+					<div class="link">
+						상대 평가 설정 > <span><a href="#">	상대평가 그룹 정보 업로드</a></span>
+					</div>
+					<h4 class="mt_20">상대평가 그룹 정보 업로드</h4>
+					<hr class="mt_20">
+				</div>
+				<div class="in_w_box mt_20">
+					<div class="sign">
+						ㆍ상대 평가 그룹 설정 기준은 개인별 해당되는 평가 그룹이 관리 그룹 일 경우 팀 단위(소수그룹일 경우 실), 리더 그룹은 지원, 사업, 영업으로 구분해 직책 단위로 구분합니다.
+					</div>
+					<hr class="mt_20">
+					<div class="btn_box_l mt_20">
+						<button class="btn_excel_line_pd">엑셀 업로드</button>
+						<span>최근 불러오기 한 일시 : <span>2020-07-01 14:00</span></span>
+					</div>
+					<h5 class="mt_40">상대 평가 그룹 설정 리스트</h5>
+					<ul class="srch_70_01 mt_10">
+						<li>검색</li>
+						<li>
+							<select class="fl mt_10 ml_10" name="" id="">
+								<option value="1">1</option>
+								<option value="2">2</option>
+							</select>
+							<input class="fl ml_1 mt_10" type="text">
+							<button class="fl btn_navy_bg_pd_mid ml_1 mt_10">검색</button>
+						</li>
+					</ul>
+					<div class="btn_box mt_40">
+						<button class="fl btn_navy_bg_pd_mid">선택 삭제</button>
+						<p class="fl ml_1 count">전체 <span>000</span>개</p>
+						<button class="fr btn_excel_bg_pd ml_10">엑셀 다운로드</button>
+					</div>
+					<div class="table_box_w100">
+						<table class="table_type_h60_01 mt_10">
+							<colgroup>
+								<col style="width: 10%;"/>
+								<col style="width: 18%;"/>
+								<col style="width: 18%;"/>
+								<col style="width: 18%;"/>
+								<col style="width: 18%;"/>
+								<col style="width: auto;"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th><input type="checkbox"></th>
+									<th>부서명</th>
+									<th>직무</th>
+									<th>사번</th>
+									<th>성명</th>
+									<th>상대 평가 그룹 코드</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="6">
+										<div class="scroll">
+											<table>
+												<colgroup>
+													<col style="width: 10%;"/>
+													<col style="width: 18%;"/>
+													<col style="width: 18%;"/>
+													<col style="width: 18%;"/>
+													<col style="width: 18%;"/>
+													<col style="width: auto;"/>
+												</colgroup>
+												<tbody>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>인사팀</td>
+														<td>인사</td>
+														<td>12341234</td>
+														<td>홍길동</td>
+														<td>1</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>results_manage-assessment_search_detailed</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<script src="js/common.js"></script>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div class="wrap assessment_search_detailed">
+		<div class="hdr_wrap">
+			<div class="header">
+				<div class="logo"><img src="img/ubase_logo.png" alt=""></div>
+				<ul>
+					<li><a href="#">기본 정보 업로드</a></li>
+					<li><a href="#">평가 설정</a></li>
+					<li class="active"><a href="#">평가 결과 관리</a></li>
+					<li><a href="#">평가하기</a></li>
+				</ul>
+				<div class="user_logout">
+					<p>안녕하세요. <span>최고관리자</span>님</p>
+					<button>로그아웃</button>
+				</div>
+			</div>
+		</div>
+		<div class="article">
+			<div id="nav" class="nav">
+				<div onclick="navToggle()" id="navBtn" class="on"></div>
+				<h3 class="header_nav_title">평가 결과 관리</h3>
+				<ul class="sub_nav">
+					<li class="cat active">
+						<a class="sub_title active" href="#">
+							<span class="cat_icon_img">
+								<img src="img/lnb_icon/question_off_icon.png" alt="">
+							</span>
+							평가 조회
+						</a>
+					</li>
+				</ul>
+			</div>
+			 <div id="wrap_contents" class="wrap_contents">
+				<div class="not_included mt_20">
+					<div class="link">
+						평과 결과 관리 > 평가 조회 > <span><a href="#"> 10월 관리자 평가</a></span>
+					</div>
+					<h4 class="mt_20">10월 관리자 평가</h4>
+					<hr class="mt_20">
+				</div>
+				<div class="in_w_box mt_20">
+					<div class="sign">
+						시행 일시 : <sapn>2020년 04월 01일 09시 10분 ~ 2020년 04월 30일 23시 59분</sapn><br>
+						평가 설명 : 본 평가는 시행 일시 동안 진행하는 4월 상담사 정기 평가 개인별 결과 페이지입니다.
+					</div>
+					<ul class="srch_70_01 mt_20">
+						<li>검색</li>
+						<li>
+							<select class="fl ml_1 mt_10" name="" id="">
+								<option value="선택" selected>선택</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+
+							</select>
+							<input class="fl ml_1 mt_10" type="text" placeholder="사번 또는 성명으로 검색 가능">
+							<button class="fl btn_navy_bg_pd_mid ml_1 mt_10">검색</button>
+						</li>
+					</ul>
+					<div class="btn_box_r mt_40">
+						<button class="btn_excel_bg_pd">엑셀 다운로드</button>
+					</div>
+					<div class="table_box_w100 mt_10">
+						<table class="table_type_h60_01">
+							<colgroup>
+								<col style="width: 5%;"/>
+								<col style="width: 5%;"/>
+								<col style="width: 8%;"/>
+								<col style="width: 8%;"/>
+								<col style="width: 5%;"/>
+								<col style="width: 5%;"/>
+								<col style="width: 11%;"/>
+								<col style="width: 11%;"/>
+								<col style="width: 11%;"/>
+								<col style="width: 7%;"/>
+								<col style="width: 9%;"/>
+								<col style="width: 8%;"/>
+								<col style="width: auto;"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th>No.</th>
+									<th>평가년도</th>
+									<th>사번</th>
+									<th>성명</th>
+									<th>순위</th>
+									<th>등급</th>
+									<th>참고용 평가 점수</th>
+									<th>점수 반영 평가<br>1차 점수</th>
+									<th>점수 반영 평가<br>2차 점수</th>
+									<th>평균 점수</th>
+									<th>주민번호</th>
+									<th>부서 코드</th>
+									<th>부서명</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="14">
+										<div class="scroll">
+											<table>
+												<colgroup>
+													<col style="width: 5%;"/>
+													<col style="width: 5%;"/>
+													<col style="width: 8%;"/>
+													<col style="width: 8%;"/>
+													<col style="width: 5%;"/>
+													<col style="width: 5%;"/>
+													<col style="width: 11%;"/>
+													<col style="width: 11%;"/>
+													<col style="width: 11%;"/>
+													<col style="width: 7%;"/>
+													<col style="width: 9%;"/>
+													<col style="width: 8%;"/>
+													<col style="width: auto;"/>
+												</colgroup>
+												<tbody>
+													<tr>
+														<td>8</td>
+														<td>2020</td>
+														<td>12341234</td>
+														<td>홍길동</td>
+														<td>1</td>
+														<td>S</td>
+														<td>100</td>
+														<td>100</td>
+														<td>100</td>
+														<td>100</td>
+														<td>1000021011111</td>
+														<td>90004815</td>
+														<td>기업문화팀(유니티)</td>
+													</tr>
+
+												</tbody>
+						</table>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

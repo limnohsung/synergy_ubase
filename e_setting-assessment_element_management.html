@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>e_setting-assessment_element_management</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<script src="js/common.js"></script>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div class="wrap assessment_element_management">
+		<div class="hdr_wrap">
+			<div class="header">
+				<div class="logo"><img src="img/ubase_logo.png" alt=""></div>
+				<ul>
+					<li><a href="#">기본 정보 업로드</a></li>
+					<li class="active"><a href="#">평가 설정</a></li>
+					<li><a href="#">평가 결과 관리</a></li>
+					<li><a href="#">평가하기</a></li>
+				</ul>
+				<div class="user_logout">
+					<p>안녕하세요. <span>최고관리자</span>님</p>
+					<button>로그아웃</button>
+				</div>
+			</div>
+		</div>
+		<div class="article">
+			<div id="nav" class="nav">
+				<div onclick="navToggle()" id="navBtn" class="on"></div>
+				<h3 class="header_nav_title">평가 설정</h3>
+				<ul class="sub_nav">
+					<li class="cat">
+						<a class="sub_title" href="#">
+							<span class="cat_icon_img">
+								<img src="img/lnb_icon/question_off_icon.png" alt="">
+							</span>
+							평가 관리
+						</a>
+						<ul class="cat_sub_nav">
+							<li><a href="#">- 평가관리</a></li>
+							<li><a href="#">- 문항지 관리</a></li>
+							<li><a href="#">- 행동 지표 관리</a></li>
+						</ul>
+					</li>
+					<li class="cat">
+						<a class="sub_title" href="#">
+							<span class="cat_icon_img">
+								<img src="img/lnb_icon/question_off_icon.png" alt="">
+							</span>
+							평가자 맵핑 설정
+						</a>
+						<ul class="cat_sub_nav">
+							<li><a href="#">- 리더십 평가</a></li>
+							<li><a href="#">- 동료 평가</a></li>
+						</ul>
+					</li>
+					<li class="cat">
+						<a class="sub_title" href="#">
+							<span class="cat_icon_img">
+								<img src="img/lnb_icon/question_off_icon.png" alt="">
+							</span>
+							상대 평가 설정
+						</a>
+						<ul class="cat_sub_nav">
+							<li><a href="#">- 상대평가 그룹 설정</a></li>
+							<li><a href="#">- 평가 그룹 인원 및 배분 설정</a></li>
+						</ul>
+					</li>
+					<li class="cat active">
+						<a class="sub_title active" href="#">
+							<span class="cat_icon_img">
+								<img src="img/lnb_icon/smallgroup_off_icon.png" alt="">
+							</span>
+							평가 요소 관리
+						</a>
+					</li>
+				</ul>
+			</div>
+		 	<div id="wrap_contents" class="wrap_contents">
+				<div class="not_included mt_20">
+					<div class="link">
+						평가설정 > <span><a href="#">	평가 요소 관리</a></span>
+					</div>
+					<h4 class="mt_20">평가 영역 및 요소 리스트</h4>
+					<hr class="mt_20">
+				</div>
+				<div class="in_w_box mt_20">
+					<h5>평가 요소</h5>
+					<ul class="srch_70_02 mt_10">
+						<li>검색</li>
+						<li>
+							<input class="fl ml_1 mt_10" type="text">
+							<button class="fl btn_navy_bg_pd_mid ml_1 mt_10">검색</button>
+						</li>
+					</ul>
+					<div class="share">
+						<div class="right_box table_box_w100">
+							<ul>
+								<li class="fl">
+									<p class="count sel_box mt_60">
+										전체 <span>000</span>개
+									</p>
+								</li>
+								<li class="fr">
+									<h5 class="mt_40">평가 타입</h5>
+									<select class="mt_10"name="" id="">
+										<option value="선택" selected>선택</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+									</select>
+								</li>
+							</ul>
+							<table class="table_type_h60_01 mt_10">
+								<colgroup>
+									<col style="width: 20%;"/>
+									<col style="width: 20%;"/>
+									<col style="width: 20%;"/>
+									<col style="width: 20%;"/>
+									<col style="width: auto;"/>
+								</colgroup>
+								<thead>
+									<tr>
+										<th>No.</th>
+										<th>평가 타입</th>
+										<th>사용 평가 그룹</th>
+										<th>영역</th>
+										<th>요소</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>역량평가</td>
+										<td>리더 그룹</td>
+										<td>기본기</td>
+										<td>근태</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="ml_1 left_box">
+							<p>평가 요소 수정</p>
+							<ul class="srch_box mt_40">
+								<li class="lh_40 mt_10">
+									<h5>평가 타입</h5>
+									<select name="" id="">
+										<option value="역량 평가" selected>역량 평가</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+									</select>
+								</li>
+								<li class="lh_40 mt_10">
+									<h5>사용 평가 그룹</h5>
+									<select name="" id="">
+										<option value="역량 평가" selected>역량 평가</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+									</select>
+								</li>
+								<li class="lh_40 mt_10">
+									<h5>소속 영역</h5>
+									<select name="" id="">
+										<option value="역량 평가" selected>역량 평가</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+									</select>
+								</li>
+								<li class="lh_40 mt_10">
+									<h5>요소 명</h5>
+									<input type="text">
+								</li>
+							</ul>
+							<div class="btn_box_r mt_20">
+								<button class="btn_gray_bg_pd_mid">삭제</button>
+								<button class="btn_navy_bg_pd_mid">수정</button>
+								<button class="btn_navy_bg_pd_mid">추가</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

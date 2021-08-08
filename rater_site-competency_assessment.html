@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>rater_site-competency_assessment_search</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<script src="js/common.js"></script>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div class="wrap competency_assessment_search">
+		<div class="hdr_wrap">
+			<div class="header">
+				<div class="logo"><img src="img/ubase_logo.png" alt=""></div>
+				<ul>
+					<li><a href="#">기본 정보 업로드</a></li>
+					<li><a href="#">평가 설정</a></li>
+					<li><a href="#">평가 결과 관리</a></li>
+					<li class="active"><a href="#">평가하기</a></li>
+				</ul>
+				<div class="user_logout">
+					<p>안녕하세요. <span>최고관리자</span>님</p>
+					<button>로그아웃</button>
+				</div>
+			</div>
+		</div>
+		<div class="article">
+			<div id="nav" class="nav">
+				<div onclick="navToggle()" id="navBtn" class="on"></div>
+				<h3 class="header_nav_title">재정리</h3>
+				<ul class="sub_nav">
+					<li class="cat">
+						<a class="sub_title" href="#">
+							<span class="cat_icon_img">
+								<img src="img/lnb_icon/question_off_icon.png" alt="">
+							</span>
+							재정리
+						</a>
+						<!-- <ul class="cat_sub_nav">
+							<li><a href="#">- 평가관리</a></li>
+							<li><a href="#">- 문항지 관리</a></li>
+							<li><a href="#">- 행동 지표 관리</a></li>
+						</ul> -->
+					</li>
+				</ul>
+			</div>
+			 <div id="wrap_contents" class="wrap_contents">
+				<div class="not_included mt_20">
+					<div class="link">
+						평가자 사이트 ><span><a href="#">	역량 평가(1차 평가/상급자)</a></span>
+					</div>
+					<h4 class="mt_20">10월 관리자 평가</h4>
+					<hr class="mt_20">
+				</div>
+				<div class="in_w_box mt_20">
+					<h5>평가 대상자 정보</h5>
+					<div class="table_box_w100">
+						<table class="table_type_h60_02 mt_10">
+							<colgroup>
+								<col style="width: 15%;"/>
+								<col style="width: auto;"/>
+							</colgroup>
+							<tbody>
+								<tr>
+									<td class="bg_col_01">평가 대상자(사번)</td>
+									<td class="tal"><div class="ml_10">홍길동(123412324)</div></td>
+								</tr>
+								<tr>
+									<td class="bg_col_01">부서</td>
+									<td class="tal"><div class="ml_10">관리부서</div></td>
+								</tr>
+								<tr>
+									<td class="bg_col_01">직무/직급</td>
+									<td class="tal"><div class="ml_10">사원</div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<hr class="mt_20">
+					<div class="btn_box_l mt_20">
+						<button class="btn_navy_bg_pd_mid">역량 평가</button>
+					</div>
+					<div class="sign mt_20">
+					ㆍ아래 평가 기준 내용을 보고 점수를 입력하세요.<br>
+					ㆍ평가를 모두 마친 이후 반드시 <b class="col_font_red">저장 버튼</b>을 클릭해야 정상적으로 평가가 저장되며 마감 후 마지막 저장 내용이 자동으로 제출 됩니다.<br>
+					ㆍ평가 마감 후 수정이 불가능합니다.
+					</div>
+					<h5 class="mt_40">역량 평가 문항</h5>
+					<div class="table_box_w100">
+						<table class="table_type_h40_01 mt_10">
+							<colgroup>
+								<col style="width: 10%;"/>
+								<col style="width: 17%;"/>
+								<col style="width: 30%;"/>
+								<col style="width: 25%;"/>
+								<col style="width: 4%;"/>
+								<col style="width: auto;"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th>평가 요소</th>
+									<th>요소</th>
+									<th>문항 내용</th>
+									<th colspan="2">행동 지표</th>
+									<th>점수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="6">
+										<div class="scroll">
+											<table>
+												<colgroup>
+													<col style="width: 10%;"/>
+													<col style="width: 17%;"/>
+													<col style="width: 30%;"/>
+													<col style="width: 25%;"/>
+													<col style="width: 4%;"/>
+													<col style="width: auto;"/>
+												</colgroup>
+												<tbody>
+													<tr>
+														<td rowspan="6">기본기</td>
+														<td rowspan="2">근태</td>
+														<td rowspan="2">출근시간을 준수 하였는가?</td>
+														<td>그렇다.</td>
+														<td>5점</td>
+														<td rowspan="2">
+															<select name="" id="">
+																<option value="점수 선택">점수 선택</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<td>아니다.</td>
+														<td>2점</td>
+													</tr>
+													<tr>
+														<td rowspan="2">일보</td>
+														<td rowspan="2">보고 일시를 준수 하였는가?</td>
+														<td>그렇다.</td>
+														<td>5점</td>
+														<td rowspan="2">
+															<select name="" id="">
+																<option value="점수 선택">점수 선택</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<td>아니다.</td>
+														<td>2점</td>
+													</tr>
+													<tr>
+														<td rowspan="2">복장</td>
+														<td rowspan="2">복장 규정을 준수 하였는가?</td>
+														<td>그렇다.</td>
+														<td>5점</td>
+														<td rowspan="2">
+															<select name="" id="">
+																<option value="점수 선택">점수 선택</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<td>아니다.</td>
+														<td>2점</td>
+													</tr>
+													<tr>
+														<td rowspan="6">기본기</td>
+														<td rowspan="2">근태</td>
+														<td rowspan="2">출근시간을 준수 하였는가?</td>
+														<td>그렇다.</td>
+														<td>5점</td>
+														<td rowspan="2">
+															<select name="" id="">
+																<option value="점수 선택">점수 선택</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<td>아니다.</td>
+														<td>2점</td>
+													</tr>
+													<tr>
+														<td rowspan="2">일보</td>
+														<td rowspan="2">보고 일시를 준수 하였는가?</td>
+														<td>그렇다.</td>
+														<td>5점</td>
+														<td rowspan="2">
+															<select name="" id="">
+																<option value="점수 선택">점수 선택</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<td>아니다.</td>
+														<td>2점</td>
+													</tr>
+													<tr>
+														<td rowspan="2">복장</td>
+														<td rowspan="2">복장 규정을 준수 하였는가?</td>
+														<td>그렇다.</td>
+														<td>5점</td>
+														<td rowspan="2">
+															<select name="" id="">
+																<option value="점수 선택">점수 선택</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<td>아니다.</td>
+														<td>2점</td>
+													</tr>
+													<tr>
+														<td rowspan="6">기본기</td>
+														<td rowspan="2">근태</td>
+														<td rowspan="2">출근시간을 준수 하였는가?</td>
+														<td>그렇다.</td>
+														<td>5점</td>
+														<td rowspan="2">
+															<select name="" id="">
+																<option value="점수 선택">점수 선택</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<td>아니다.</td>
+														<td>2점</td>
+													</tr>
+													<tr>
+														<td rowspan="2">일보</td>
+														<td rowspan="2">보고 일시를 준수 하였는가?</td>
+														<td>그렇다.</td>
+														<td>5점</td>
+														<td rowspan="2">
+															<select name="" id="">
+																<option value="점수 선택">점수 선택</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<td>아니다.</td>
+														<td>2점</td>
+													</tr>
+													<tr>
+														<td rowspan="2">복장</td>
+														<td rowspan="2">복장 규정을 준수 하였는가?</td>
+														<td>그렇다.</td>
+														<td>5점</td>
+														<td rowspan="2">
+															<select name="" id="">
+																<option value="점수 선택">점수 선택</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<td>아니다.</td>
+														<td>2점</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="btn_box_r lh_40 mt_10 total_point">
+						<span>총 점수</span>
+						<input class="ml_10" type="text">
+					</div>
+					<div class="btn_box_c mt_40">
+						<button class="btn_navy_bg_big">저장</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- wrap div 마지막 -->
+</body>
+</html>

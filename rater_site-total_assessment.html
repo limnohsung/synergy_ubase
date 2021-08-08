@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>rater_site-total_assessment</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<script src="js/common.js"></script>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div class="wrap total_assessment">
+		<div class="hdr_wrap">
+			<div class="header">
+				<div class="logo"><img src="img/ubase_logo.png" alt=""></div>
+				<ul>
+					<li><a href="#">기본 정보 업로드</a></li>
+					<li><a href="#">평가 설정</a></li>
+					<li><a href="#">평가 결과 관리</a></li>
+					<li class="active"><a href="#">평가하기</a></li>
+				</ul>
+				<div class="user_logout">
+					<p>안녕하세요. <span>최고관리자</span>님</p>
+					<button>로그아웃</button>
+				</div>
+			</div>
+		</div>
+		<div class="article">
+			<div id="nav" class="nav">
+				<div onclick="navToggle()" id="navBtn" class="on"></div>
+				<h3 class="header_nav_title">재정리</h3>
+				<ul class="sub_nav">
+					<li class="cat">
+						<a class="sub_title" href="#">
+							<span class="cat_icon_img">
+								<img src="img/lnb_icon/question_off_icon.png" alt="">
+							</span>
+							재정리
+						</a>
+						<!-- <ul class="cat_sub_nav">
+							<li><a href="#">- 평가관리</a></li>
+							<li><a href="#">- 문항지 관리</a></li>
+							<li><a href="#">- 행동 지표 관리</a></li>
+						</ul> -->
+					</li>
+				</ul>
+			</div>
+			 <div id="wrap_contents" class="wrap_contents">
+				<div class="not_included mt_20">
+					<div class="link">
+						평가자 사이트 > <span><a href="#">	평가하기</a></span>
+					</div>
+					<!-- <h4 class="mt_20">행동 지표 관리</h4>
+					<hr class="mt_20"> -->
+				</div>
+				<div class="in_w_box mt_20">
+					<div class="sign">
+						ㆍ10월 관리자 평가가 진행중입니다.  전체 110건 중 <span>100건</span>이 <b>평가 전</b>입니다.<br>
+						ㆍ평가 기간: <span>2020-10-01 00:00  ~  2020-10-31 23:59</span>
+					</div>
+					<div class="small_box mt_40">
+						<ul class="small_nav">
+							<li class="fl on">역량평가 1차</li>
+							<li class="fl">역량평가 2차</li>
+							<li class="fl">리더십 평가</li>
+							<li class="fl">동료 평가</li>
+							<li class="fl">본인 평가</li>
+						</ul>
+						<div class="small_contents">
+							<ul class="total_srch mt_20">
+								<li>평가상태</li>
+								<li>
+									<input class="ml_1" type="checkbox"> 평가 대기
+									<input class="ml_1" type="checkbox"> 평가 완료
+									<input class="ml_1" type="checkbox"> 평가 마감
+								</li>
+								<li>검색</li>
+								<li>
+									<input class="fl ml_1 mt_10" type="text" placeholder="사번 또는 성명으로 검색 가능">
+									<button class="fl btn_navy_bg_pd_mid ml_1 mt_10">검색</button>
+								</li>
+							</ul>
+							<p class="count">전체 <span>3</span>개</p>
+							<div class="table_box_w100 mt_10">
+								<table class="table_type_h60_01">
+									<colgroup>
+										<col style="width: 5%;"/>
+										<col style="width: 15%;"/>
+										<col style="width: 8%;"/>
+										<col style="width: 13%;"/>
+										<col style="width: 8%;"/>
+										<col style="width: 8%;"/>
+										<col style="width: 8%;"/>
+										<col style="width: 8%;"/>
+										<col style="width: 12%;"/>
+										<col style="width: auto;"/>
+									</colgroup>
+									<thead>
+										<tr>
+											<th>No.</th>
+											<th>평가명</th>
+											<th>평가타입</th>
+											<th>평가 대상자(사번)</th>
+											<th>리더십 평가</th>
+											<th>동료 평가</th>
+											<th>부서</th>
+											<th>직무/직급</th>
+											<th>평가상태</th>
+											<th>평가하기</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td colspan="10">
+												<div class="scroll">
+													<table>
+														<colgroup>
+															<col style="width: 5%;"/>
+															<col style="width: 15%;"/>
+															<col style="width: 8%;"/>
+															<col style="width: 13%;"/>
+															<col style="width: 8%;"/>
+															<col style="width: 8%;"/>
+															<col style="width: 8%;"/>
+															<col style="width: 8%;"/>
+															<col style="width: 12%;"/>
+															<col style="width: auto;"/>
+														</colgroup>
+														<tbody>
+															<tr>
+																<td colspan="10">평가가 없습니다.</td>
+															</tr>
+															<tr>
+																<td>8</td>
+																<td>10월 관리자 평가</td>
+																<td>역량 평가</td>
+																<td>홍길동(12341234)</td>
+																<td class="hover_assess">
+																	<a href="#">
+																		100점
+																	</a>
+																	<div class="popup popup_assess">
+																		<div class="box">
+																			<h5>홍길동(12341234)님의 리더십 평가 결과 상세 입니다.</h5>
+																			<hr class="mt_20">
+																			<div class="table_box_w100 mt_20">
+																				<table class="table_type_sub_h40">
+																					<colgroup>
+																						<col style="width: 20%;"/>
+																						<col style="width: 60%;"/>
+																						<col style="width: auto;"/>
+																					</colgroup>
+																					<thead>
+																						<tr>
+																							<th>평가요소</th>
+																							<th>평가기준</th>
+																							<th>점수</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td rowspan="4">인간성</td>
+																							<td>리더로서의 적합한 인격을 갖추고 있다.</td>
+																							<td>5</td>
+																						</tr>
+																						<tr>
+																							<td>부하 직원으로부터 존경을 받고 있다.</td>
+																							<td>4</td>
+																						</tr>
+																						<tr>
+																							<td>이기적이지 않고 공적인 것을 우선시 한다.</td>
+																							<td>2</td>
+																						</tr>
+																						<tr>
+																							<td>동료, 상사로부터 두터운 신임을 받고 있다.</td>
+																							<td>1</td>
+																						</tr>
+																						<tr>
+																							<td rowspan="4">인간성</td>
+																							<td>리더로서의 적합한 인격을 갖추고 있다.</td>
+																							<td>5</td>
+																						</tr>
+																						<tr>
+																							<td>부하 직원으로부터 존경을 받고 있다.</td>
+																							<td>4</td>
+																						</tr>
+																						<tr>
+																							<td>이기적이지 않고 공적인 것을 우선시 한다.</td>
+																							<td>2</td>
+																						</tr>
+																						<tr>
+																							<td>동료, 상사로부터 두터운 신임을 받고 있다.</td>
+																							<td>1</td>
+																						</tr>
+																						<tr>
+																							<td rowspan="4">인간성</td>
+																							<td>리더로서의 적합한 인격을 갖추고 있다.</td>
+																							<td>5</td>
+																						</tr>
+																						<tr>
+																							<td>부하 직원으로부터 존경을 받고 있다.</td>
+																							<td>4</td>
+																						</tr>
+																						<tr>
+																							<td>이기적이지 않고 공적인 것을 우선시 한다.</td>
+																							<td>2</td>
+																						</tr>
+																						<tr>
+																							<td>동료, 상사로부터 두터운 신임을 받고 있다.</td>
+																							<td>1</td>
+																						</tr>
+																						<tr>
+																							<td rowspan="4">인간성</td>
+																							<td>리더로서의 적합한 인격을 갖추고 있다.</td>
+																							<td>5</td>
+																						</tr>
+																						<tr>
+																							<td>부하 직원으로부터 존경을 받고 있다.</td>
+																							<td>4</td>
+																						</tr>
+																						<tr>
+																							<td>이기적이지 않고 공적인 것을 우선시 한다.</td>
+																							<td>2</td>
+																						</tr>
+																						<tr>
+																							<td>동료, 상사로부터 두터운 신임을 받고 있다.</td>
+																							<td>1</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																			</div>
+																		</div>
+																	</div><!-- 팝업 div -->
+																</td>
+																<td>50점</td>
+																<td>관리부서</td>
+																<td>사원</td>
+																<td>평가대기</td>
+																<td><button class="btn_navy_line_min br_5">평가하기</button></td>
+															</tr>
+															<tr>
+																<td>8</td>
+																<td>10월 관리자 평가</td>
+																<td>역량 평가</td>
+																<td>홍길동(12341234)</td>
+																<td class="hover_assess">
+																	<a href="#">
+																		100점
+																	</a>
+																	<div class="popup popup_assess">
+																		<div class="box">
+																			<h5>홍길동(12341234)님의 리더십 평가 결과 상세 입니다.</h5>
+																			<hr class="mt_20">
+																			<div class="table_box_w100 mt_20">
+																				<table class="table_type_sub_h40">
+																					<colgroup>
+																						<col style="width: 20%;"/>
+																						<col style="width: 60%;"/>
+																						<col style="width: auto;"/>
+																					</colgroup>
+																					<thead>
+																						<tr>
+																							<th>평가요소</th>
+																							<th>평가기준</th>
+																							<th>점수</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td rowspan="4">인간성</td>
+																							<td>리더로서의 적합한 인격을 갖추고 있다.</td>
+																							<td>5</td>
+																						</tr>
+																						<tr>
+																							<td>부하 직원으로부터 존경을 받고 있다.</td>
+																							<td>4</td>
+																						</tr>
+																						<tr>
+																							<td>이기적이지 않고 공적인 것을 우선시 한다.</td>
+																							<td>2</td>
+																						</tr>
+																						<tr>
+																							<td>동료, 상사로부터 두터운 신임을 받고 있다.</td>
+																							<td>1</td>
+																						</tr>
+																						<tr>
+																							<td rowspan="4">인간성</td>
+																							<td>리더로서의 적합한 인격을 갖추고 있다.</td>
+																							<td>5</td>
+																						</tr>
+																						<tr>
+																							<td>부하 직원으로부터 존경을 받고 있다.</td>
+																							<td>4</td>
+																						</tr>
+																						<tr>
+																							<td>이기적이지 않고 공적인 것을 우선시 한다.</td>
+																							<td>2</td>
+																						</tr>
+																						<tr>
+																							<td>동료, 상사로부터 두터운 신임을 받고 있다.</td>
+																							<td>1</td>
+																						</tr>
+																						<tr>
+																							<td rowspan="4">인간성</td>
+																							<td>리더로서의 적합한 인격을 갖추고 있다.</td>
+																							<td>5</td>
+																						</tr>
+																						<tr>
+																							<td>부하 직원으로부터 존경을 받고 있다.</td>
+																							<td>4</td>
+																						</tr>
+																						<tr>
+																							<td>이기적이지 않고 공적인 것을 우선시 한다.</td>
+																							<td>2</td>
+																						</tr>
+																						<tr>
+																							<td>동료, 상사로부터 두터운 신임을 받고 있다.</td>
+																							<td>1</td>
+																						</tr>
+																						<tr>
+																							<td rowspan="4">인간성</td>
+																							<td>리더로서의 적합한 인격을 갖추고 있다.</td>
+																							<td>5</td>
+																						</tr>
+																						<tr>
+																							<td>부하 직원으로부터 존경을 받고 있다.</td>
+																							<td>4</td>
+																						</tr>
+																						<tr>
+																							<td>이기적이지 않고 공적인 것을 우선시 한다.</td>
+																							<td>2</td>
+																						</tr>
+																						<tr>
+																							<td>동료, 상사로부터 두터운 신임을 받고 있다.</td>
+																							<td>1</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																			</div>
+																		</div>
+																	</div><!-- 팝업 div -->
+																</td>
+																<td>50점</td>
+																<td>관리부서</td>
+																<td>사원</td>
+																<td>평가대기</td>
+																<td><button class="btn_dark_bg_min br_5">평가마감</button></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>e_setting-assessment_manage_made</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<script src="js/common.js"></script>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div class="wrap assessment_manage_made">
+		<div class="hdr_wrap">
+			<div class="header">
+				<div class="logo"><img src="img/ubase_logo.png" alt=""></div>
+				<ul>
+					<li><a href="#">기본 정보 업로드</a></li>
+					<li class="active"><a href="#">평가 설정</a></li>
+					<li><a href="#">평가 결과 관리</a></li>
+					<li><a href="#">평가하기</a></li>
+				</ul>
+				<div class="user_logout">
+					<p>안녕하세요. <span>최고관리자</span>님</p>
+					<button>로그아웃</button>
+				</div>
+			</div>
+		</div>
+		<div class="article">
+			<div id="nav" class="nav">
+				<div onclick="navToggle()" id="navBtn" class="on"></div>
+				<h3 class="header_nav_title">평가 설정</h3>
+				<ul class="sub_nav">
+					<li class="cat active">
+						<a class="sub_title active" href="#">
+							<span class="cat_icon_img">
+								<img src="img/lnb_icon/question_off_icon.png" alt="">
+							</span>
+							평가 관리
+						</a>
+						<ul class="cat_sub_nav">
+							<li class="active"><a href="#">- 평가관리</a></li>
+							<li><a href="#">- 문항지 관리</a></li>
+							<li><a href="#">- 행동 지표 관리</a></li>
+						</ul>
+					</li>
+					<li class="cat">
+						<a class="sub_title" href="#">
+							<span class="cat_icon_img">
+								<img src="img/lnb_icon/question_off_icon.png" alt="">
+							</span>
+							평가자 맵핑 설정
+						</a>
+						<ul class="cat_sub_nav">
+							<li><a href="#">- 리더십 평가</a></li>
+							<li><a href="#">- 동료 평가</a></li>
+						</ul>
+					</li>
+					<li class="cat">
+						<a class="sub_title" href="#">
+							<span class="cat_icon_img">
+								<img src="img/lnb_icon/question_off_icon.png" alt="">
+							</span>
+							상대 평가 설정
+						</a>
+						<ul class="cat_sub_nav">
+							<li><a href="#">- 상대평가 그룹 설정</a></li>
+							<li><a href="#">- 평가 그룹 인원 및 배분 설정</a></li>
+						</ul>
+					</li>
+					<li class="cat">
+						<a class="sub_title" href="#">
+							<span class="cat_icon_img">
+								<img src="img/lnb_icon/smallgroup_off_icon.png" alt="">
+							</span>
+							평가 요소 관리
+						</a>
+					</li>
+				</ul>
+			</div>
+			 <div id="wrap_contents" class="wrap_contents">
+				<div class="not_included mt_20">
+					<div class="link">
+						평가설정 > 평가관리 ><span><a href="#">	평가 만들기</a></span>
+					</div>
+					<h4 class="mt_20">평가 만들기</h4>
+					<hr class="mt_20">
+				</div>
+				<div class="in_w_box mt_20">
+					<h5>평가 기본 정보</h5>
+					<div class="table_box_w100">
+						<table class="table_type_sub_h60 mt_10">
+							<colgroup>
+								<col style="width: 14%;"/>
+								<col style="width: 14%;"/>
+								<col style="width: 29%;"/>
+								<col style="width: 14%;"/>
+								<col style="width: auto;"/>
+							</colgroup>
+							<tbody>
+								<tr>
+									<td class="bg_col_01 tac">평가 명*</td>
+									<td colspan="4"><input class="wide" type="text"></td>
+								</tr>
+								<tr>
+									<td class="bg_col_01 tac" rowspan="9">시행 일시*</td>
+									<td class="bg_col_01 tac" colspan="4">참고용 평가 기간 설정</td>
+								</tr>
+								<tr>
+									<td class="bg_col_01 tac">시작일</td>
+									<td class="tal"><input class="ml_1" type="text"><b></b></td>
+									<td class="bg_col_01 tac">시작시간</td>
+									<td class="tal"><input class="ml_1" type="text"> ex) 오전 9시 10분 : 0910</td>
+								</tr>
+								<tr>
+									<td class="bg_col_01 tac">종료일</td>
+									<td class="tal"><input class="ml_1" type="text"><b></b></td>
+									<td class="bg_col_01 tac">종료시간</td>
+									<td class="tal"><input class="ml_1" type="text"> ex) 오후 6시 30분 : 1830</td>
+								</tr>
+								<tr>
+									<td class="bg_col_01 tac" colspan="4">점수 반영 평가 1차 기간 설정</td>
+								</tr>
+								<tr>
+									<td class="bg_col_01 tac">시작일</td>
+									<td class="tal"><input class="ml_1" type="text"><b></b></td>
+									<td class="bg_col_01 tac">시작시간</td>
+									<td class="tal"><input class="ml_1" type="text"> ex) 오전 9시 10분 : 0910</td>
+								</tr>
+								<tr>
+									<td class="bg_col_01 tac">종료일</td>
+									<td class="tal"><input class="ml_1" type="text"><b></b></td>
+									<td class="bg_col_01 tac">종료시간</td>
+									<td class="tal"><input class="ml_1" type="text"> ex) 오후 6시 30분 : 1830</td>
+								</tr>
+								<tr>
+									<td class="bg_col_01 tac" colspan="4">점수 반영 평가 2차 기간 설정</td>
+								</tr>
+								<tr>
+									<td class="bg_col_01 tac">시작일</td>
+									<td class="tal"><input class="ml_1" type="text"><b></b></td>
+									<td class="bg_col_01 tac">시작시간</td>
+									<td class="tal"><input class="ml_1" type="text"> ex) 오전 9시 10분 : 0910</td>
+								</tr>
+								<tr>
+									<td class="bg_col_01 tac">종료일</td>
+									<td class="tal"><input class="ml_1" type="text"><b></b></td>
+									<td class="bg_col_01 tac">종료시간</td>
+									<td class="tal"><input class="ml_1" type="text"> ex) 오후 6시 30분 : 1830</td>
+								</tr>
+								<tr>
+									<td class="bg_col_01 tac">평가 설명*</td>
+									<td colspan="4">
+										<textarea name="" id="" cols="30" rows="10" placeholder="본 평가는 시행 시작일 ~ 시행 종료일까지 진행한다."></textarea>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="sign mt_20">
+						<b>평가 항목 정보</b> (각 평가 항목은 각 항목 별 가장 최근 저장 되거나 등록된 내용을 불러와 자동 등록됩니다.)<br>
+					ㆍ각 평가 항목은 각 항목 별 가장 최근 저장 되거나 등록된 내용을 불러와 자동 등록됩니다.<br>
+					ㆍ수정을 원할 경우 상세 보기와 수정하기 버튼을 클릭하세요.
+					</div>
+					<h5 class="mt_40">1. 점수 반영 평가</h5>
+					<div class="table_box_w100">
+						<table class="table_type_sub_h60 mt_10">
+							<colgroup>
+								<col style="width: 14%;"/>
+								<col style="width: auto;"/>
+							</colgroup>
+							<tbody>
+								<tr>
+									<td class="bg_col_01 tac">역량 평가</td>
+									<td class="tal"><button class="ml_10 btn_navy_line_pd_min br_5">상세보기</button></td>
+								</tr>
+								<tr>
+									<td class="bg_col_01 tac">업적 평가</td>
+									<td class="tal"><div class="ml_10">‘2020 상반기 사업 계획 대비 달성률 지표.xlsx’ 파일이 적용 됩니다.</div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<h5 class="mt_40">2. 참고용 평가</h5>
+					<div class="table_box_w100">
+						<table class="table_type_sub_h60 mt_10">
+							<colgroup>
+								<col style="width: 14%;"/>
+								<col style="width: auto;"/>
+							</colgroup>
+							<tbody>
+								<tr>
+									<td class="bg_col_01 tac">리더십 평가</td>
+									<td class="tal"><button class="ml_10 btn_navy_line_pd_min br_5">상세보기</button></td>
+								</tr>
+								<tr>
+									<td class="bg_col_01 tac">동료 평가</td>
+									<td class="tal"><button class="ml_10 btn_navy_line_pd_min br_5">상세보기</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="btn_box_c mt_60">
+						<button class="btn_navy_bg_big">저장</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bg_back"></div>
+		<!-- 역량평가 팝업 -->
+		<div class="popup popup_competency_evaluation">
+			<div class="header">
+				<span>역량평가 상세보기</span>
+				<div class="close_icon"><a href="#"></a></div>
+			</div>
+			<div class="popup_content">
+				<p class="sign col_font_red">평가 그룹과 세부 직무를 선택 하시면 아래 리스트로 문항이 노출 됩니다.</p>
+				<div class="sel_box mt_10">
+					<span>평가 그룹</span>
+					<select class="ml_1" name="" id="">
+						<option value="선택" selected>선택</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+					</select>
+					<span class="ml_5">세부 직무</span>
+					<select class="ml_1" name="" id="">
+						<option value="선택" selected>선택</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+					</select>
+				</div>
+				<hr class="mt_20">
+				<h5 class="mt_20">문항 리스트(10월 역량 평가 문항지)</h5>
+				<div class="table_box_w100 mt_10">
+					<table class="table_type_h40_01">
+						<colgroup>
+							<col style="width: 10%;"/>
+							<col style="width: 8%;"/>
+							<col style="width: 30%;"/>
+							<col style="width: 30%;"/>
+							<col style="width: auto;"/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>영역</th>
+								<th>요소</th>
+								<th>문항 내용</th>
+								<th>행동 지표</th>
+								<th>점수</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td colspan="5">
+									<div class="scroll">
+										<table>
+											<colgroup>
+												<col style="width: 10%;"/>
+												<col style="width: 8%;"/>
+												<col style="width: 30%;"/>
+												<col style="width: 30%;"/>
+												<col style="width: auto;"/>
+											</colgroup>
+											<tbody>
+												<tr>
+													<td rowspan="3">기본기</td>
+													<td rowspan="3">근태</td>
+													<td rowspan="3">출근 시간을 준수하였는가?</td>
+													<td>출근 시간 10분 전 도착</td>
+													<td>5</td>
+												</tr>
+												<tr>
+													<td>출근 시간 정시 도착</td>
+													<td>12</td>
+												</tr>
+												<tr>
+													<td>출근 시간 10분 후 도착</td>
+													<td>20</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- 리더십 평가 팝업 -->
+		<div class="popup popup_leadership_evaluation">
+			<div class="header">
+				<span>리더십 평가 상세보기</span>
+				<div class="close_icon"><a href="#"></a></div>
+			</div>
+			<div class="popup_content">
+				<h5>문항 리스트(10월 역량 평가 문항지)</h5>
+				<div class="table_box_w100 mt_10">
+					<table class="table_type_h40_01">
+						<colgroup>
+							<col style="width: 10%;"/>
+							<col style="width: 40%;"/>
+							<col style="width: 40%;"/>
+							<col style="width: auto;"/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>평가요소</th>
+								<th>평가기준</th>
+								<th>행동지표</th>
+								<th>점수</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td colspan="4">
+									<div class="scroll">
+										<table>
+											<colgroup>
+												<col style="width: 10%;"/>
+												<col style="width: 40%;"/>
+												<col style="width: 40%;"/>
+												<col style="width: auto;"/>
+											</colgroup>
+											<tbody>
+												<tr>
+													<td rowspan="9">인간성</td>
+													<td rowspan="3">리더로서 적합한 인격을 갖추고 있다.</td>
+													<td>그렇다</td>
+													<td>10</td>
+												</tr>
+												<tr>
+													<td>보통이다</td>
+													<td>5</td>
+												</tr>
+												<tr>
+													<td>그렇지 않다.</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td rowspan="3">부하 직원으로부터 존경을 받고 있다.</td>
+													<td>그렇다</td>
+													<td>10</td>
+												</tr>
+												<tr>
+													<td>보통이다</td>
+													<td>5</td>
+												</tr>
+												<tr>
+													<td>그렇지 않다.</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td rowspan="3">이기적이지 않고 공적인 것을 우선시 한다.</td>
+													<td>그렇다</td>
+													<td>10</td>
+												</tr>
+												<tr>
+													<td>보통이다</td>
+													<td>5</td>
+												</tr>
+												<tr>
+													<td>그렇지 않다.</td>
+													<td>1</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- 동료평가 팝업 -->
+		<div class="popup popup_partner_evaluation">
+			<div class="header">
+				<span>동료평가 상세보기</span>
+				<div class="close_icon"><a href="#"></a></div>
+			</div>
+			<div class="popup_content">
+				<h5>문항 리스트(10월 역량 평가 문항지)</h5>
+				<div class="table_box_w100 mt_10">
+					<table class="table_type_h40_01">
+						<colgroup>
+							<col style="width: 10%;"/>
+							<col style="width: 40%;"/>
+							<col style="width: 40%;"/>
+							<col style="width: auto;"/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>평가요소</th>
+								<th>평가기준</th>
+								<th>행동지표</th>
+								<th>점수</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td colspan="4">
+									<div class="scroll">
+										<table>
+											<colgroup>
+												<col style="width: 10%;"/>
+												<col style="width: 40%;"/>
+												<col style="width: 40%;"/>
+												<col style="width: auto;"/>
+											</colgroup>
+											<tbody>
+												<tr>
+													<td rowspan="9">인간성</td>
+													<td rowspan="3">동료로서 적합한 인격을 갖추고 있다.</td>
+													<td>그렇다</td>
+													<td>10</td>
+												</tr>
+												<tr>
+													<td>보통이다</td>
+													<td>5</td>
+												</tr>
+												<tr>
+													<td>그렇지 않다.</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td rowspan="3">동료 직원으로부터 존경을 받고 있다.</td>
+													<td>그렇다</td>
+													<td>10</td>
+												</tr>
+												<tr>
+													<td>보통이다</td>
+													<td>5</td>
+												</tr>
+												<tr>
+													<td>그렇지 않다.</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td rowspan="3">이기적이지 않고 공적인 것을 우선시 한다.</td>
+													<td>그렇다</td>
+													<td>10</td>
+												</tr>
+												<tr>
+													<td>보통이다</td>
+													<td>5</td>
+												</tr>
+												<tr>
+													<td>그렇지 않다.</td>
+													<td>1</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div><!-- wrap div 마지막 -->
+</body>
+<script>
+	$(document).ready(function(){
+		$('.close_icon').click(function(){
+			$('.popup_competency_evaluation').hide();
+		})
+		$('.close_icon').click(function(){
+			$('.popup_leadership_evaluation').hide();
+		})
+		$('.close_icon').click(function(){
+			$('.popup_partner_evaluation').hide();
+		})
+	})
+</script>
+</html>
